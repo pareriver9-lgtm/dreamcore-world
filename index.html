@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somewhere Else</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>SOMEWHERE...</h1>
+    <p class="subtitle">You were here before, but when?</p>
+</header>
+
+<div class="container">
+
+    <div class="panel">
+        <h2>WELCOME BACK.</h2>
+        <p>We've been expecting you.</p>
+    </div>
+
+
+
+<div class="panel">
+    <h3>THINGS TO EXPLORE</h3>
+
+    <button onclick="randomMessage()">
+        Talk to ???
+    </button>
+
+    <button onclick="location.href='pages/room.html'">
+        Enter the room
+    </button>
+
+    <div class="dialogue-box">
+        <p id="message">...</p>
+    </div>
+</div>
+
+
+
+<div class="panel">
+    <h3>RESTRICTED AREA</h3>
+
+    <div class="angel-section">
+
+        <img
+            src="images/angel.jpg"
+            alt="An unknown figure"
+            class="angel-image"
+        >
+
+        <div class="angel-text">
+            <p>Somewhere beyond this page is another place.</p>
+
+            <p>Access requires a number.</p>
+
+            <input
+                type="text"
+                id="accessCode"
+                placeholder="ENTER CODE..."
+                autocomplete="off"
+            >
+
+            <button onclick="checkCode()">
+                UNLOCK
+            </button>
+
+            <p id="accessMessage"></p>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<footer>
+    PLEASE STAY.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
