@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Forgotten Room</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #090912;
+            color: #d8d0e8;
+            font-family: Georgia, serif;
+            min-height: 100vh;
+            text-align: center;
+            box-shadow: inset 0 0 100px 20px #292044;
+        }
+
+        h1 {
+            padding-top: 65px;
+            letter-spacing: 7px;
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        .subtitle {
+            color: #77718b;
+            font-size: 13px;
+        }
+
+        .shelves {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 100px;
+            margin: 45px auto;
+        }
+
+        .shelf {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 45px;
+            width: 75%;
+            max-width: 750px;
+            padding: 20px;
+            border-bottom: 5px solid #655779;
+        }
+
+        .item {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 35px;
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-10px);
+            filter: brightness(1.8);
+        }
+
+        .item p {
+            font-size: 10px;
+            color: #89819b;
+            letter-spacing: 2px;
+        }
+#description {
+    color: #c8b9e8;
+    min-height: 30px;
+    margin: 35px auto 0;
+    padding: 15px;
+    width: 80%;
+    max-width: 500px;
+    background: rgba(40, 30, 60, 0.35);
+    border: 1px solid #655779;
+    box-sizing: border-box;
+}
+            </style>
+</head>
+
+<body>
+
+    <h1>THE FORGOTTEN ROOM</h1>
+    <p class="subtitle">You weren't supposed to find this place.</p>
+
+    <div class="shelves">
+
+        <div class="shelf">
+
+            <button class="item" onclick="showItem('It feels warm. Why does it feel warm?')">
+                🕯️
+                <p>THE CANDLE</p>
+            </button>
+
+            <button class="item" onclick="showItem('There is a photograph inside. The faces are missing.')">
+                🖼️
+                <p>THE FRAME</p>
+            </button>
+
+            <button class="item" onclick="showItem('It is addressed to someone who no longer exists.')">
+                ✉️
+                <p>THE LETTER</p>
+            </button>
+
+        </div>
+
+        <div class="shelf">
+
+            <button class="item" onclick="showItem('It keeps ticking, but the hands never move.')">
+                ⏰
+                <p>THE CLOCK</p>
+            </button>
+
+            <button class="item" onclick="showItem('You recognize this. How?')">
+                🧸
+                <p>THE TOY</p>
+            </button>
+
+            <button class="item" onclick="showItem('There is something written on the back. It says DO NOT TRUST THE DOOR.')">
+                🔑
+                <p>THE KEY</p>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="description">
+    Look around. Something is waiting.
+</div>
+
+    <script>
+        function showItem(message) {
+            document.getElementById("description").textContent = message;
+        }
+    </script>
+
+</body>
+</html>
